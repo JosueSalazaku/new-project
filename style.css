@@ -8,26 +8,38 @@ html,body{
     display: grid;
     height: 100%;
     place-items: center;
+    background: #000;
 }
 
 .wrapper{
     height: 100px;
     width: 360px;
-    background: red;
+    background: linear-gradient(135deg, #8b2ee2, #bdaf33, #0911ab);
     border-radius: 10px;
 }
 
 .wrapper .display{
     position: absolute;
+    /* opacity: 0; */
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    background: blue;
+    z-index: 999;
+    background: #1b1b1b;
     height: 85px;
     width: 345px;
+    border-radius: 6px;
     text-align: center;
 }
 
-.wrapper .display .time{
-    
+.wrapper .display #time{
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #8b2ee2, #bdaf33, #0911ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
