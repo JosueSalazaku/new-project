@@ -20,12 +20,17 @@ html,body{
     animation: animate 1.5s linear infinite;
 }
 
-.wrapper .display{
+
+.wrapper .display,
+.wrapper span{
     position: absolute;
-    /* opacity: 0; */
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+}
+
+.wrapper .display{
+
     z-index: 999;
     background: #1b1b1b;
     height: 85px;
@@ -50,4 +55,18 @@ html,body{
     100%{
         filter: hue-rotate(360deg);
     }
+}
+
+.wrapper span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 10px;
+}
+.wrapper span:first-child{
+    filter: blur(10px);
+}
+
+.wrapper span:last-child{
+    filter: blur(20px);
 }
