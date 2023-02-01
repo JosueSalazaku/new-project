@@ -14,8 +14,10 @@ html,body{
 .wrapper{
     height: 100px;
     width: 360px;
-    background: linear-gradient(135deg, #8b2ee2, #bdaf33, #0911ab);
+    cursor: default;
+    background: linear-gradient(135deg, #12f5d3, #bdaf33, #a807cb);
     border-radius: 10px;
+    animation: animate 1.5s linear infinite;
 }
 
 .wrapper .display{
@@ -34,12 +36,18 @@ html,body{
 
 .wrapper .display #time{
     line-height: 85px;
-    color: #fff;
     font-size: 50px;
     font-weight: 600;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #8b2ee2, #bdaf33, #0911ab);
+    background: linear-gradient(135deg, #12f5d3, #bdaf33, #a807cb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
 
+}
+
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
